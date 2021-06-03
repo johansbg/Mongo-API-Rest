@@ -4,6 +4,16 @@ import jwt from 'jsonwebtoken';
 import {schemaCreateComment, schemaUpdateComment} from '../validations/comment'
 require('dotenv').config()
 
+/*find({ occupation: /host/ }).
+  //igual
+  where('name.last').equals('Ghost').
+  //greater than y lowerthan
+  where('age').gt(17).lt(66).
+  //valores iguales a los de el array
+  where('likes').in(['vaporizing', 'talking']).
+  //Regex
+   Person.findOne({ "name" : { $regex: /Ghost/, $options: 'i' } }*/
+
 const getUserLoggedId = (req, res) => {
     var authorization = req.headers.authorization.split(' ')[1], decoded;
     try {
