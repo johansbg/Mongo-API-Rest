@@ -32,7 +32,7 @@ const register = async (req, res) => {
     });
     try {
         const savedUser = await user.save();
-        res.json({
+        res.status(200).json({
             error: null,
             data: savedUser
         })
@@ -68,7 +68,7 @@ const registerAdmin = async (req, res) => {
     });
     try {
         const savedUser = await user.save();
-        res.json({
+        res.status(200).json({
             error: null,
             data: savedUser
         })

@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
     })
 });
 require('./routes/auth')(app);
-
+require('./routes/task')(app);
+require('./routes/comment')(app);
 // passport middleware
 app.use(passport.initialize());
 // passport config
